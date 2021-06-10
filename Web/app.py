@@ -242,7 +242,7 @@ def make_reservation():
                 error = 'Truck is not available in this location'
                 return render_template('make_reservation.html', error=error)
             cur.close()
-    return render_template('payment.html', form=form)
+    return render_template('make_reservation.html', form=form)
 
 @app.route('/payment', methods=['GET', 'POST'])
 @is_logged_in
